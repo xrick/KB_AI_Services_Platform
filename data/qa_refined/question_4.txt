@@ -1,0 +1,39 @@
+num:4
+
+question:
+```
+In the ACP part after the PHX, if the DMIC is connected to the Codec, we need to remove it in the BIOS ASL.
+```
+
+answer:
+```
+DMIC disable: Do't include AcpChildPDM.asl, the microphone will not appear in the OS.
+```
+
+Expanded:
+```
+When configuring the ACP (Audio Co-Processor) section following the PHX platform implementation, if the DMIC (Digital Microphone) is directly connected to the Codec hardware, the following BIOS ASL (ACPI Source Language) adjustment is required:
+
+Technical Implementation:
+
+ACPI Configuration Modification:
+
+Remove any references to the AcpChildPDM.asl file from the ACPI table configuration. This file typically contains the ACPI device declaration for the DMIC hardware path.
+
+System-Level Effects:
+
+This exclusion triggers the following changes:
+
+The DMIC device node will be omitted from the ACPI namespace during BIOS initialization
+The operating system's device enumeration process will not detect the physical DMIC hardware
+Audio input routing will be fully managed through the Codec's defined interfaces
+Technical Rationale:
+
+This configuration prevents dual-path audio input conflicts between the ACP and Codec subsystems. By removing the DMIC declaration from ACPI:
+
+Ensures exclusive signal path control through the Codec
+Eliminates resource allocation overlaps (IRQ/IO/Memory)
+Maintains compliance with ACPI 6.4 specifications for device hierarchy management
+Avoids potential driver conflicts in OS-level audio subsystem management
+The modification preserves system stability while maintaining full microphone functionality through the Codec-defined audio path.
+```

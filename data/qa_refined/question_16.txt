@@ -1,0 +1,49 @@
+num:16
+
+question:
+```
+Connecting both 4K and 2K HDMI monitors only results in a 1080P resolution.
+```
+
+answer:
+```
+modify BIOS setup:
+AMD_PBS_SETUP.DP[1] set STR_DXIO_DDI_HDMI_TEXT
+AMD_PBS_SETUP.TxSLEWEn set STR_ENABLED_TEXT
+```
+
+Expanded:
+```
+Technical Resolution for Multi-Monitor Resolution Limitation:
+
+To address the resolution constraint when using 4K+2K HDMI monitor combinations, implement these BIOS parameter adjustments in the AMD PBS configuration:
+
+DDI Configuration Update
+
+In AMD_PBS_SETUP:
+
+Set DP[1].DDI_TYPE = STR_DXIO_DDI_HDMI_TEXT
+Function: Forces proper HDMI 2.0/2.1 DDI mapping for high-bandwidth interfaces
+Signal Integrity Enhancement
+
+Configure:
+
+TxSLEWEn = STR_ENABLED_TEXT
+Purpose: Activates transmitter slew rate control to maintain signal quality across multiple displays
+Technical Rationale:
+
+This configuration:
+
+Allocates sufficient TMDS clock channels for 4K@60Hz operation
+Prevents inter-lane timing skew in multi-monitor configurations
+Maintains HDMI 2.0/2.1 compliance across simultaneous outputs
+Resolves bandwidth partitioning conflicts between mixed-resolution displays
+Expected Outcome:
+
+Post-configuration:
+
+Primary monitor should achieve 3840×2160 @ 60Hz
+Secondary monitor maintains 2560×1440 @ 60Hz
+Eliminates automatic resolution downgrade to 1080p
+These settings require validation of board-specific signal integrity parameters and thermal design capacity.
+```
