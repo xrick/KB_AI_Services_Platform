@@ -24,60 +24,93 @@
     {% raw %}
     <script type="text/babel">
         const HomeContent = ({ onServiceClick }) => {
-            const services = [
+            const services_row1 = [
                 {
                     icon: "message-circle",
-                    title: "AI聊天",
-                    description: "智能對話與問答服務",
+                    title: "QA-Assistant",
+                    description: "智能QA助手，快速回答問題",
                     id: "chat"
                 },
-                {
-                    icon: "pen-tool",
-                    title: "寫作建議",
-                    description: "提供專業的寫作建議和內容優化",
-                    id: "writing"
-                },
-                {
-                    icon: "book-open",
-                    title: "規定助手",
-                    description: "快速查詢與理解各項規定",
-                    id: "regulations"
-                },
-                {
-                    icon: "book",
-                    title: "eBook",
-                    description: "電子書籍管理與閱讀系統",
-                    id: "ebook"
-                }
+                // {
+                //     icon: "pen-tool",
+                //     title: "Module-2",
+                //     description: "Module-2",
+                //     id: "essay-advisor"
+                // },
+                // {
+                //     icon: "scale",
+                //     title: "Module-3",
+                //     description: "Module-3",
+                //     id: "regulations"
+                // },
+                // {
+                //     icon: "book",
+                //     title: "Module-3",
+                //     description: "Module-3",
+                //     id: "k9-helper"
+                // }
             ];
+            // const services_row2 = [
+            //     {
+            //         icon: "notebook-pen",
+            //         title: "Module-4",
+            //         description: "Module-4",
+            //         id: "composition_ocr"
+            //     },
+            // ];
 
             return (
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    {services.map((service, index) => (
+                    {services_row1.map((service_row1, index) => (
                         <div 
                             key={index}
-                            onClick={() => onServiceClick(service.id)}
+                            onClick={() => onServiceClick(service_row1.id)}
                             className="bg-white dark:bg-gray-800 rounded-lg shadow-sm hover:shadow-md transition-all duration-200 p-6 cursor-pointer transform hover:-translate-y-1"
                         >
                             <div className="flex items-center gap-4">
                                 <div className="p-2 bg-blue-50 dark:bg-blue-900 rounded-lg">
                                     <i 
-                                        data-lucide={service.icon}
+                                        data-lucide={service_row1.icon}
                                         className="w-6 h-6 text-blue-500 dark:text-blue-300"
                                     ></i>
                                 </div>
                                 <div>
                                     <h3 className="text-lg font-semibold dark:text-white">
-                                        {service.title}
+                                        {service_row1.title}
                                     </h3>
                                     <p className="text-gray-600 dark:text-gray-300 text-sm mt-1">
-                                        {service.description}
+                                        {service_row1.description}
                                     </p>
                                 </div>
                             </div>
                         </div>
                     ))}
+                    {/* {services_row2.map((service_row2, index) => (
+                        <div 
+                            key={index}
+                            onClick={() => onServiceClick(service_row2.id)}
+                            className="bg-white dark:bg-gray-800 rounded-lg shadow-sm hover:shadow-md transition-all duration-200 p-6 cursor-pointer transform hover:-translate-y-1"
+                        >
+                            <div className="flex items-center gap-4">
+                                <div className="p-2 bg-blue-50 dark:bg-blue-900 rounded-lg">
+                                    <i 
+                                        data-lucide={service_row2.icon}
+                                        className="w-6 h-6 text-blue-500 dark:text-blue-300"
+                                    ></i>
+                                </div>
+                                <div>
+                                    <h3 className="text-lg font-semibold dark:text-white">
+                                        {service_row2.title}
+                                    </h3>
+                                    <p className="text-gray-600 dark:text-gray-300 text-sm mt-1">
+                                        {service_row2.description}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    ))} */}
                 </div>
+                
             );
         };
         
@@ -85,6 +118,7 @@
             const [isDark, setIsDark] = React.useState(
                 window.matchMedia('(prefers-color-scheme: dark)').matches
             );
+
             const [currentView, setCurrentView] = React.useState('home');
             const [currentContent, setCurrentContent] = React.useState(null);
 
@@ -124,21 +158,84 @@
                     } catch (error) {
                         console.error('Error loading chat content:', error);
                     }
-                } else if (serviceId === 'writing') {
-                    setCurrentView('writing');
-                    setCurrentContent(`
-                        <h2 class="text-lg font-bold text-gray-700 dark:text-gray-200">寫作建議</h2>
-                        <p class="text-gray-600 dark:text-gray-300 mt-2">此功能尚未實現。</p>
-                    `);
-                } else if (serviceId === 'ebook') {
-                    setCurrentView('ebook');
-                    setCurrentContent(`
-                        <h2 class="text-lg font-bold text-gray-700 dark:text-gray-200">電子書</h2>
-                        <p class="text-gray-600 dark:text-gray-300 mt-2">此功能尚未實現。</p>
-                    `);
+                } else if (serviceId === 'essay-advisor') {
+                    try{
+                        const response = await fetch('/essay-advisor');
+                        const content = await response.text();
+                        setCurrentView('essay-advisor');
+                        setCurrentContent(content);
+
+                        const script = document.createElement('script');
+                        script.src = '/static/js/essay_advisor.js';
+                        script.onload = () => {
+                            console.log("essay_advisor.js 加載完成");
+                            if (typeof window.initializeEssayAdvisorInterface === 'function') {
+                                console.log("調用 initializeEssayAdvisorInterface...");
+                                window.initializeEssayAdvisorInterface();
+                            } else {
+                                console.error("initializeEssayAdvisorInterface 未定義！");
+                            }
+                        };
+                        script.onerror = () => {
+                            console.error("essay_advisor.js 加載失敗！");
+                        };
+                        document.body.appendChild(script);
+                    } catch (error) {
+                        console.error('Error loading essay advisor content:', error);
+                    }
+                } else if (serviceId === 'k9-helper') {
+                    try {
+                        const response = await fetch('/k9-helper');
+                        const content = await response.text();
+                        
+                        setCurrentView('k9-helper');
+                        setCurrentContent(content);
+
+                        const script = document.createElement('script');
+                        script.src = '/static/js/k9_helper.js';
+                        script.onload = () => {
+                            console.log("k9_helper.js 加載完成");
+                            if (typeof window.initializeK9HelperInterface === 'function') {
+                                console.log("調用 initializeK9HelperInterface...");
+                                window.initializeK9HelperInterface();
+                            } else {
+                                console.error("initializeK9HelperInterface 未定義！");
+                            }
+                        };
+                        script.onerror = () => {
+                            console.error("k9_helper.js 加載失敗！");
+                        };
+                        document.body.appendChild(script);
+                    } catch (error) {
+                        console.error('Error loading k9 helper content:', error);
+                    }
+                } else if (serviceId === 'composition_ocr'){
+                    try{
+                        const response = await fetch('/ocr-page'); // 假設這個路由返回聊天的 HTML
+                        const content = await response.text();
+                        setCurrentView('composition_ocr');
+                        setCurrentContent(content);
+                        // 動態加載 ocr_page.js
+                        const script = document.createElement('script');
+                            script.src = '/static/js/ocr_page.js'; // 假設 ocr_page.js 的路徑
+                            script.onload = () => {
+                                console.log("ocr_page.js 加載完成");
+                                if (typeof window.initializeOCRInterface === 'function') {
+                                    console.log("調用 initializeOCRInterface...");
+                                    window.initializeOCRInterface(); // 調用全局函數
+                                } else {
+                                    console.error("initializeChatInterface 未定義！");
+                                }
+                            };
+                            script.onerror = () => {
+                                console.error("ocr_page.js 加載失敗！");
+                            };
+                            document.body.appendChild(script);
+                    } catch (error) {
+                        console.error('Error loading OCR Page:', error);
+                    }
                 }
             }
-
 
             React.useEffect(() => {
                 lucide.createIcons();
@@ -150,7 +247,7 @@
                     }
                 }
             }, []);
-
+            
             return (
                 <div className="min-h-screen flex">
                     {/* Sidebar */}
@@ -170,7 +267,7 @@
                             >
                                 <div className="flex items-center gap-2">
                                     <i data-lucide="home" className="w-5 h-5"></i>
-                                    <span>首頁</span>
+                                    <span>服務主頁</span>
                                 </div>
                             </div>
                             <div className="px-4 py-2 cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-700">
@@ -208,10 +305,13 @@
                             {currentView === 'chat' && (
                                 <div id="chat-main" dangerouslySetInnerHTML={{ __html: currentContent }} />
                             )}
-                            {currentView === 'writing' && (
+                            {currentView === 'essay-advisor' && (
                                 <div dangerouslySetInnerHTML={{ __html: currentContent }} />
                             )}
-                            {currentView === 'ebook' && (
+                            {currentView === 'k9-helper' && (
+                                <div dangerouslySetInnerHTML={{ __html: currentContent }} />
+                            )}
+                            {currentView === 'composition_ocr' && (
                                 <div dangerouslySetInnerHTML={{ __html: currentContent }} />
                             )}
                         </main>
