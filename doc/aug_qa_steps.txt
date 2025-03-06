@@ -1,0 +1,2017 @@
+Step-1: generate prompt snippet for each Question:Answer pair.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Rule-1: please use English to give the responses.
+Task: Generate prompt snippets for each row of the csv.
+Actions:
+1. read the qa.csv and all data of the "Question" and "Answer" fields.
+2. write a python programming using the following following prompt template string to generate prompt snippet for each row of the csv:
+prompt="""
+{Context:{Question}:{Answer}}
+ou are a llm prompt expert.
+Please, Generate two variations of question-answer sentences on the basis of above context data and express in the following format:
+question:
+answer:
+"""
+Goal: generate a python program to satisfy the above requests.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+Step-2:
+Row 1 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-Low battery power is less than 4%. Connect to PD power supply >Do not turn on (displays low battery icon) light: answer-TYPE C PD AC Loss:
+Can be confirmed with an oscilloscope)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 2 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-Type C PD:
+Depending on the Watt number of the Type c PD adapter, STT is limited.: answer-Base on Token " Name  = "ADJUST_PD_POWER_TABLE_BY_PDADAPTER""
+> Reltek and  ITE chip  
+Please note "Watts are calculated differently")
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 3 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-In the ACP part after the PHX, if the DMIC is connected to the Codec, we need to remove it in the BIOS ASL.: answer-DMIC disable:
+Do't include AcpChildPDM.asl, the microphone will not appear in the OS.)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 4 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-In the ACP part after the PHX, if the DMIC is connected to the Codec, we need to remove it in the BIOS ASL. : answer-DMIC disable: Do't include AcpChildPDM.asl, the microphone will not appear in the OS.)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 5 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-How can we fix the issue where the OS event log triggers an unexpected issue due to EC not responding?: answer-EC needs to support mapping the EC RAM to memory
+ space instead of I/O. Please refer to the modified 
+code in the file 'Fix OS event log arise EC no response cause unexpected issue.7z)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 6 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-How can we resolve the OS event log issue caused by the EC not responding, which leads to unexpected behavior?: answer-Refer to patch:Fix OS event log arise EC no response cause unexpected)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 7 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-What is the correct approach to fix the OS event log issue that arises due to EC non-responsiveness, causing unexpected system issues?: answer-Refer to patch:Fix OS event log arise EC no response cause unexpected)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 8 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-MS WHQL test item failed
+MSFT 3rd Party Market Place Root CA test fail.: answer-Refer to patch:Fixed MSFT 3rd Party Market Place Root CA test fail.7z)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 9 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-OS enable core isolation cause panel garbage during S4 resume.: answer-Refer to patch: Fixed OS enable core isolation cause panel garbage during S4 resume.7z)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 10 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-What is preventing AutoAgingTest version 2.0.0.7 from running on the OS?: answer-Please refer to the code in the patch file: the file 
+name is 'For AutoAgingTest2.0.0.7.zip memory test.7z'.")
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 11 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-AutoAgingTest2.0.0.7 can not funtion problem.: answer-Refer to patch: For AutoAgingTest2.0.0.7.zip memory test.7z)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 12 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-How to fix AutoAgingTest2.0.0.7 can not run? : answer-Refer to patch: For AutoAgingTest2.0.0.7.zip memory test.7z)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 13 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-Implement MODS auto into S4 by DC mode(OS action).: answer-Referto patch: Support Gpe(Pwrbtn)ForAdaptiveS4.7z)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 14 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-How to convert mods mode to s4 in DC mode?: answer-Referto patch: Support Gpe(Pwrbtn)ForAdaptiveS4.7z)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 15 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-An external HDMI monitor is connected, but there is no HDMI audio device listed in the sound output devices in the system's bottom-right corner.: answer-modify BIOS setup:
+AMD_PBS_SETUP.DP[1] set STR_DXIO_DDI_HDMI_TEXT
+AMD_PBS_SETUP.TxSLEWEn set STR_ENABLED_TEXT)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 16 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-Connecting both 4K and 2K HDMI monitors only results in a 1080P resolution.: answer-modify BIOS setup:
+AMD_PBS_SETUP.DP[1] set STR_DXIO_DDI_HDMI_TEXT
+AMD_PBS_SETUP.TxSLEWEn set STR_ENABLED_TEXT)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 17 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-Connecting a 1080P_180Hz HDMI monitor, the maximum refresh rate available is only 60Hz.: answer-modify BIOS setup:
+AMD_PBS_SETUP.DP[1] set STR_DXIO_DDI_HDMI_TEXT
+AMD_PBS_SETUP.TxSLEWEn set STR_ENABLED_TEXT)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 18 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-
+DDR Controller Configuration->Thermal Throttling->disable all 3 items
+DDR Phy Configuration->DDR PHY->PPT control = Disable: answer-PPT Control set manual, if the parameters below remain 0, they are disabled.
+Thermal Control set manual)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 19 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-Why does pressing the hotkey to enter the BIOS setup menu often fail to respond when the system is booting?: answer-Because the key confirmation wait time is too short, a delay needs to be added. Please refer to the code in the file OEM_HOTKEY_DELAY.zip.)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 20 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-Can you give me OEM HOTKEY DELAY patch? : answer-Because the key confirmation wait time is too short, a delay needs to be added. Please refer to the code in the file OEM_HOTKEY_DELAY.zip.)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 21 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-Add a Num Lock option to the BIOS setup menu to control its On or Off state during the POST phase or in the initial state under the OS: answer-Please refer to the code in the file Numlock_SOLUTION.zip)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 22 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-What is the reference for the Numlock solution?: answer-Refer to patch: Numlock_SOLUTION)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 23 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-Update the OS Secure Boot key: answer-Please refer to the code in the file EMDOOR_SECUREBOOT_KEY_v5_20231226)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 24 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-Can you give me EMDOOR_SECUREBOOT_KEY: answer-Refer to patch: EMDOOR_SECUREBOOT_KEY_v5_20231226)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 25 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-
+System reboot times to long.: answer-Fix system reboot times to long.
+gEfiAmdAgesaPkgTokenSpaceGuid.PcdAcpController = FALSE)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 26 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-How to fix system reboot times to long? : answer-Fix system reboot times to long.
+gEfiAmdAgesaPkgTokenSpaceGuid.PcdAcpController = FALSE)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 27 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-How to solve System reboot times to long? : answer-Fix system reboot times to long.
+gEfiAmdAgesaPkgTokenSpaceGuid.PcdAcpController = FALSE)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 28 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-setup mouse function : answer-setup mouse function: CRB_I2C_TOUCH_FUNCTION_SUPPORT = 1)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 29 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-Support Touchpad MODS wake: answer-Revise the code to configure EC support and initialization for Touchpad MODS wake functionality in Modern Standby mode to resolve related wake issues.)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 30 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-How to wake up the touchpad?: answer-Revise the code to configure EC support and initialization for Touchpad MODS wake functionality in Modern Standby mode to resolve related wake issues.)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 31 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-Consumes 5% of battery and enters MODS: answer-1.Need EC support 
+2.USE GPIO trigger Consumes 5% of battery)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 32 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-How to support multiple languages for the BIOS menu?: answer-Here is the modified code with the correct Value setting for supporting Traditional Chinese (zh-cht) and English (en-US):
+TOKEN
+  Name        = "SUPPORTED_LANGUAGES"
+  Value       = "zh-cht;en-US"
+  TokenType   = Expression
+  TargetMAK   = Yes
+End)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 33 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-How to add a new language?: answer-The code defines supported setup languages, adding "zh-cht" and "en-US" to resolve issues with setup language availability.)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 34 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-
+Reltek audio console app-> format only 48000Hz 16Bits option,
+           should be  has more option.e.g."44100Hz 16bits", "48000Hz  24Bits"....: answer-Revise code to configure audio device properties to expand Realtek Audio Console format options, adding support for more sample rates and bit depths.)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 35 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-The following are the failed data points from the HDMI eye diagram test. The external consultant suggests lowering the voltage.: answer-modify BIOS setup:
+AMD_PBS_SETUP.DP[1] set STR_DXIO_DDI_HDMI_TEXT
+AMD_PBS_SETUP.TxSLEWEn set STR_ENABLED_TEXT)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 36 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-Using an AsMedia chip to convert PCIE to SATA, the SATA device can't be displayed in the BIOS menu.: answer-Refer to patch: Display_SATA_device)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 37 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-Add smart fan item, Reg 0x4F write 0x00 when auto,Reg 0x4F write 0x40 and Reg 0x4B write 0xFF when full fan.: answer-Refer to patch: smartfan)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 38 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-Using an AsMedia chip to convert PCIE to SATA, the SATA size can't be displayed in the BIOS menu.: answer-Refer to patch: Display_SATA_size)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 39 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-Modify AC power loss item, Reg 0xA8 bit 2 write 0 when always off,write 1 when always on.: answer-Refer to patch: AC_POWER_LOSS)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 40 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-How to solve the problem of USB4 GEVENT failing after returning from Modern Standby?: answer-Please refer to the code in the file USB_effect_MS.zip)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 41 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-How to solve the problem of USB4 GEVENT failing after returning from Modern Standby?: answer-Refer to patch: USB_effect_MS)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 42 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-Fix the bug for Board Memory Parameter: DQ QDT impedance: answer-Refer to patch: PVT\Bug_29_On Board Memory Parameter.zip)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 43 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-How to fix the bug for Board Memory Parameter for "DQ QDT impedance": answer-Refer to patch: PVT\Bug_29_On Board Memory Parameter.zip)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 44 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-MS 28% to 97% to modify CLKREQ6 INIT_TABLE because WIFI uses CLKREQ6.: answer-Refer to patch: WIFIcannotMS)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 45 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-Why does the system crash with a BSOD error code CRITICAL_PROCESS_DIED after returning from Modern Standby when an NVMe drive has an HDD password set?": answer-This is caused by the NVMe drive not supporting 
+D3Hot. Please refer to the code in the file D3Hot fix bsod critical process died.7z)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 46 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-What is the solution for NVMe HDD password for D3Hot fix bsod critical process died?: answer-Refer to patch: NVMe HDD password for D3Hot fix bsod critical process died.7z)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 47 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-SSDT Table(CPMDFIG2, CDFFIGs, CPMDFDG1, CPMD3CLD, DFDGCNEV)will be replaced to OemID和OemTable.: answer-Refer to patch: dGPUMSAcpiTableNotexist)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 48 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-Why does the OEM POST logo disappear after the resolution changes: answer-Please refer to the modified code in the file 'PostLogoDisappearResolutionChanged)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 49 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-How to fix S4 wake up issue? : answer-Refer to patch: PVT\Bug_33__S4_Clear lowe power flag.zip)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 50 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-
+Clear ForceLowPowerMode flag : answer-Refer to patch: PVT\Bug_33__S4_Clear lowe power flag.zip)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 51 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-The number of external monitors and output audio devices does not match: answer-Modify    Name  = "PcdCfgMaxNumAudioEndpoints")
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 52 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-[Windows /Monitors] The number of external monitors and output audio devices does not match: answer-Modify Name = "PcdCfgMaxNumAudioEndpoints")
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 53 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-How can the Build Date and Time be updated in real-time when building the BIOS ROM?: answer-Here is the modified code to ensure the Build Date 
+and Time are updated in real-time when building
+ the BIOS ROM:
+[File Patch]Root\makefile
+ifeq ($(TODAY),) 
+     export TODAY := $(shell $(DATE) +'%m/%d/%Y')
+endif
+ifeq ($(NOW),) 
+     export NOW := $(shell $(DATE) +%T)
+endif)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 54 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-What is the build time issue for OverWrite Build Day /Time?: answer-Revise the code to modify the makefile to overwrite the build date and time, ensuring the correct timestamp is used during the build process.)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 55 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-Automatically clear fTpm nvram without showing messages: answer-Refer to patch: Automatically clear fTpm nvram without showing messages.7z)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 56 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-Fixed ctrl+home hotkey can not BIOS recovery for usb keyboard: answer-Refer to patch: Fixed ctrl+home hotkey can not BIOS recovery for usb keyboard.7z)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 57 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-How to do BIOS recovery hotkey?: answer-Refer to patch: Fixed ctrl+home hotkey can not BIOS recovery for usb keyboard.7z)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 58 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-SA50216 Supplement_TSE_2_22_1289: answer-Refer to patch: SA50216 Supplement_TSE_2_22_1289.7z)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 59 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-AC only, the panel was no display when system wake form MS.: answer-Refer to patch: MS_WAKE_PANEL_NO_DISPLAY.zip)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 60 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-AB819-S Project Issue: When an HDD password is set, the system hangs when waking up from Modern Standby.: answer-Refer to patch: CZN_MS_HDD_PW_ISSUE.zip)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 61 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-After moving the HDD password information to 
+the Security page, the password information cannot be updated: answer-Refer to patch: Security_page_update_hdd_password_info.zip)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 62 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-AMD Second OEM logo support: answer-Refer to patch: AMD_SecondOemLogo.zip)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 63 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-AMD GFX ITEM MOVE FORM CBS: answer-Refer to patch: AMD_GFX_ITEM_MOVE_FORM_CBS.zip)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 64 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-Solve the problem that duplicate OS can't be displayed.: answer-Refer to patch: duplicate_OS_show)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 65 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-How can we fix the BSOD problem when flashing the BIOS under the OS?: answer-Modify the following sections in the original code:
+
+# ELINK
+#    Name        = "EmdoorSmiFlashPreUpdate"
+#    Parent      = "SMIFlashPreUpdateList"
+#    InvokeOrder = AfterParent
+#    Token       = "EmdoorSmmLib_INF_SUPPORT" = "1"
+# End
+
+# ELINK
+#    Name        = "EmdoorSmiFlashEndUpdate"
+#    Parent      = "SMIFlashEndUpdateList"
+#    InvokeOrder = AfterParent
+#    Token       = "EmdoorSmmLib_INF_SUPPORT" = "1"
+# End)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 66 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-Fix flash BIOS BSOD problem under OS.? : answer-Revise the code to configure the Flash BIOS update sequence to prevent BSOD issues occurring under the operating system.)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 67 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-How to fix flash BIOS BSOD problem under OS: answer-Revise the code to configure the Flash BIOS update sequence to prevent BSOD issues occurring under the operating system.)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 68 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-Why can't the DB card be detected?: answer-You must modify the following two settings:
+1.Set Pcie Dxio Timing ControlEnable to Enabled.
+2.Set PCIE Link L0 Polling to 50000)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 69 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-DB card can't be detected ? : answer-Pcie Dxio timing ControlEnable set Enabled
+PCIE Link L0 Pooling set 50000)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 70 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-I can't detect the DB card, can you have any good suggestions?: answer-Pcie Dxio timing ControlEnable set Enabled
+PCIE Link L0 Pooling set 50000)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 71 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-Add AI button function, EC Q18 event.: answer-Refer to patch: 2024\AI_Button.zip)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 72 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-AP39 Project Issue: After replacing the 7435 CPU, the system fails to enter Modern Standby.: answer-Because the 7435 CPU does not have an iGPU, and the APX39 uses Smart MUX, the iGPU cannot be turned off.
+
+You need to set iGPU Configuration from 'iGPU Disabled' to 'Auto')
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 73 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-What is AMI VEB?: answer-AMI VEB (Visual eBIOS) is a BIOS/UEFI development
+ tool provided by AMI (American Megatrends Inc.). It is primarily used for BIOS/UEFI firmware development, testing, and debugging, enabling BIOS engineers to quickly configure and modify BIOS settings, thus accelerating the development process.)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 74 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-Some dGPU performance is not up to standard.: answer-Set PcdCfgPeApmEnable to 0 in eSetupPhoenix.xml to disable SmartShift.)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 75 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-UNICORN custom modify for CBS: answer-Refer to patch: UNICORN custom modify for CBS.7z)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 76 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-Add white BIOS support for PI1.0.8.0 for STX: answer-Refer to patch: Add white BIOS support for PI1.0.8.0 for STX.7z)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 77 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-How to add white BIOS support?: answer-Refer to patch: Add white BIOS support for PI1.0.8.0 for STX.7z)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 78 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-Fixed PI1.0.8.0 LPDDR5 board id boot fail for STX: answer-Refer to patch: Fixed PI1.0.8.0 LPDDR5 board id boot fail for STX.7z)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 79 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-Add ABL_DEBUG_SUPPORT switch for STX: answer-Refer to patch: Add ABL_DEBUG_SUPPORT switch for STX.7z)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 80 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-Support customize XML path for STX: answer-Refer to patch: Support customize XML path for STX.7z)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 81 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-Aquarius Password behavior customizing: answer-Refer to patch: Aquarius Password behavior.zip)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 82 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-When CPU and memory as well as SSD and VGA checks fail, GPIO6 is pulled high to control the LED.: answer-Refer to patch: Check_Device.zip)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 83 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-AMI Veb50 above occur Kernel32.lib error.: answer-Refer to patch: AMI Veb50 Kernel32.lib compiler error)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 84 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-Kernel32.lib error? : answer-Refer to patch: AMI Veb50 Kernel32.lib compiler error)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 85 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-What is the Kernel32.lib error?: answer-Refer to patch: AMI Veb50 Kernel32.lib compiler error)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 86 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-How to disable NPU device?: answer-Set PcdCFGNbioIPUEnable to 0)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 87 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-How to enable NPU device? : answer-Set PcdCFGNbioIPUEnable to 1.)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 88 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-Fix WOL issue when MS.: answer-Refer to patch: WOLwhenMS.zip)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 89 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-AKK839 Project Issue: The system hangs at error code 
+0xABE4 during boot.: answer-The reason is that the AMI code is intended for 
+CRB usage, where the EC is used to determine the Board ID.
+
+For an OEM project, it is necessary to ignore or remove the CRB EC Board ID.)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 90 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-How to fix hang up 0xabe4?: answer-JIRA EXT-109402 check whether remove CRB EC board ID)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 91 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-AKK839 Side by side DDR5 memory setting: answer-Refer to patch: AKK839_SideBySide_Memory1216.rar)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 92 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-AKK839 Fix hang up 0xE2C5.: answer-Refer to patch: AKK839_Fixed hang up E2C5.zip)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 93 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-How to fix hang up 0xe2c5?: answer-Refer to patch: AKK839_Fixed hang up E2C5.zip)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 94 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-Emdoor WMI include Smart Charger Control: answer-Refer to patch: EMDOOR_WMI_Smart_charger_2.0.zip)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 95 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-APX656 PRO APU can't show Firmware protection: answer-1. BIOS設定:CBS -> SOC Miscellaneous Control -> Microsoft Security Levels -> Pluton fTPM Level 3
+2. Install OS Windows 11 24H2
+3. run windows update
+4. Check Windows Security 
+5. Firmware protection item display)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 96 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-How to fix touch pad wake KB backligh?: answer-Refer to patch: TP_WAKE KB_BACKLIGHT.zip)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 97 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-ARB656 APU power too low issue.: answer-RMB平台，如果設定了PPT APU only數值，
+就會被啟用影響，APU的瓦數會被PPT APU only數值限制)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 98 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-How to fix the ARB656 APU power too low issue?: answer-RMB平台，如果設定了PPT APU only數值，
+就會被啟用影響，APU的瓦數會被PPT APU only數值限制)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 99 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-Use the touchpad to light up the keyboard LED lights: answer-Refer to patch: TP_WAKE KB_BACKLIGHT.zip)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 100 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-Force 10sec Shut down(Power button pullmenu): answer-Refer to patch: \Force_10S_Shutdown.zip)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 101 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-How to implement force 10sec shutdown by power button? : answer-Refer to patch: \Force_10S_Shutdown.zip)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 102 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-Force 10sec Shut down? : answer-Refer to patch: \Force_10S_Shutdown.zip)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 103 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-Fixed Smbios Type1 and Type2 as override string by CRB code for STX: answer-Refer to patch: Fixed Smbios Type1 and Type2 as override string by CRB code.7z)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 104 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question- Patch build error information difficult find: answer-Refer to patch: Patch build error information difficult find.7z)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 105 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-Add ML BIOS naming rule: answer-Refer to patch: Add ML BIOS naming rule.7z)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 106 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-Why is ml bios naming rule? : answer-Refer to patch: Add ML BIOS naming rule.7z)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 107 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-How to Add ML BIOS naming rule?: answer-Refer to patch: Add ML BIOS naming rule.7z)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 108 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-Patch HDMI 4K 60Hz can not display for external panel for STX PS883X HDMI retimer: answer-Refer to patch: Patch HDMI 4K 60Hz can not display for external panel for STX.7z)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 109 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-Fixed PBS SETUP value is wrong after flash BIOS for STX.: answer-Refer to patch: Fixed PBS SETUP value is wrong after flash BIOS.7z)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 110 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-How to fixed PBS SETUP value is wrong after flash BIOS for STX?: answer-Refer to patch: Fixed PBS SETUP value is wrong after flash BIOS.7z)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 111 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-Why is the USB port completely unresponsive?: answer-Need to cancel the action of USB OC pin. 
+Modify the code:
+    Name  = "PcdXhciOcPinSelect" &    Name  = "PcdXhci1OcPinSelect"
+    Value  = "0xFFFFFFFF")
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 112 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-
+PI after RMB PI 1.0.0.1 will fail when running Memory Margin.: answer-Need to disable phy low power. (The official version cannot be imported for testing purposes.))
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 113 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-Fan Noise Implemen: answer-Refer to patch: FanNoise)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 114 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-How to implement the Fan Noise function?: answer-Refer to patch: FanNoise
+
+)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 115 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-MS WHQL test item failed.
+    System Audio - KS Position Test failed: answer-If you update SMU version to 4.69.48.0 and later please make sure below pcd value=0 to fix audio WHLK testing fail issue. The formal change as also below will be implemented into PI1005.
+)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 116 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-App Load Default Feature: answer-Refer to patch: AppLoadDefault)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 117 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-App Load Default ?: answer-Refer to patch: AppLoadDefault)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 118 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-Add Armor feature: answer-Refer to patch: Armor)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 119 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-Change Logo: answer-Refer to patch: ChangeLogo)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 120 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-AGPIO85 GPIO Pin have Floating status: answer-Modify the code:
+Smu13FeaturesEnable.h FEATURE_FAN_CONTROLLER_BIT set 0,
+PcdMapping
+    Name  = "PcdPublicFanControlEnable"
+    GuidSpace  = "gEfiAmdAgesaPkgTokenSpaceGuid"
+    PcdType  = "PcdsDynamicDefault"
+    DataType  = "Boolean"
+    Value  = "FALSE"
+    Offset  = 00h
+    Length  = 01h
+    TargetDSC = Yes
+End)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 121 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-Why agpio85 function can not work? : answer-Modify the code:
+Smu13FeaturesEnable.h FEATURE_FAN_CONTROLLER_BIT set 0,
+PcdMapping
+    Name  = "PcdPublicFanControlEnable"
+    GuidSpace  = "gEfiAmdAgesaPkgTokenSpaceGuid"
+    PcdType  = "PcdsDynamicDefault"
+    DataType  = "Boolean"
+    Value  = "FALSE"
+    Offset  = 00h
+    Length  = 01h
+    TargetDSC = Yes
+End)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 122 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-Set the OS brightness to 0%, and the measured panel brightness must be 13 cd/m².: answer-AC918 Project requires adjusting the following code:
+
+AMD_CPM_DISPLAY_FEATURE_TABLE gCpmDisplayFeatureTable
+→ ① Minimum Signal
+→ ② First Lumi/Signal
+
+① and ② cannot be equal → If they are the same, the brightness setting becomes invalid, resulting in the darkest display)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 123 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-Why can't the BIOS be rolled back to an older version
+ after flashing?: answer-The root cause is the increase in PROJECT_MINOR_VERSION.
+Here is the modified code:
+TOKEN
+    Name  = "IGNORE_IMAGE_ROLLBACK"
+    Value  = "1"
+    Help  = "When enabled, FW Capsule Validate logic will skip image Revision."
+    TokenType = Boolean
+    TargetH = Yes
+End)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 124 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-Panel initial boot brightness adjustment: answer-TOKEN
+    Name  = "AMD_GOP_PLATFORMTODRIVER_SUPPORT"
+    Value  = "1"
+    Help  = "Please turn on if you need GOP platform to drivers"
+    TokenType = Boolean
+    TargetH = Yes
+End
+Here is the modified code:
+    #define GNB_ONEOF_PLATFORMTODRIVER_LCD_BOOTUP_BL_LEVEL\
+        numeric varid = SETUP_DATA.AmdGopLcdBootUpBlLevel, \
+            prompt = STRING_TOKEN(STR_GOP_BOOTUP_LEVEL), \
+            help = STRING_TOKEN(STR_GOP_BOOTUP_LEVEL_HELP), \
+	    	flags = RESET_REQUIRED,\
+            minimum = 0x0, \
+            maximum = 0xff, \
+            step = 1, \
+            default = 0xff,\
+            default = 0xff, defaultstore = AmiMfgDefault,\
+        endnumeric;)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 125 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-Avoid system reset when booting into windows on debug mode enable: answer-Causing by lib, remove unused lib, it's passed)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 126 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-Windows boot manager disappear when doing OS reboot.: answer-Update EFI OS name module to V19)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 127 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-MS WHQL test item failed
+HLK test fail "BitLocker Tpm And Recovery Password 
+tests for AOAC devices with PCR[7]": answer-refert to EIP700163.7z)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 128 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-System hangs during bring-up: answer-AmdCpmOemInitPeim.c / AmdPbsHii.vfr
+KBC supporyt 0
+EC Support 0)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 129 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-Bring up?: answer-AmdCpmOemInitPeim.c / AmdPbsHii.vfr
+KBC supporyt 0
+EC Support 0)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 130 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-Reduce PCIe SSD read and write performance in 
+battery mode.: answer-Example Code for Modification-->
+CRB default:
+     AmdCpmOemTable.c or Project_Gpio_Table.h 
+      PORT_PARAM (PP_PSPP_DC, 0x122)     //DC_DirectIndirect[11:8], DC_MaxPreferredSpeed[7:4], DC_MinPreferredSpeed[3:0]
+Modify:
+      AmdCpmOemTable.c or Project_Gpio_Table.h 
+      PORT_PARAM (PP_PSPP_DC, 0x133)     //DC_DirectIndirect[11:8], DC_MaxPreferredSpeed[7:4], DC_MinPreferredSpeed[3:0])
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 131 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-How to adjust pcie ssd speed? : answer-CRB default:
+     AmdCpmOemTable.c or Project_Gpio_Table.h 
+      PORT_PARAM (PP_PSPP_DC, 0x122)     //DC_DirectIndirect[11:8], DC_MaxPreferredSpeed[7:4], DC_MinPreferredSpeed[3:0]
+Modify:
+      AmdCpmOemTable.c or Project_Gpio_Table.h 
+      PORT_PARAM (PP_PSPP_DC, 0x133)     //DC_DirectIndirect[11:8], DC_MaxPreferredSpeed[7:4], DC_MinPreferredSpeed[3:0])
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 132 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-Why does disabling AMD_PSP_ROM_ARMOR3_SMM_SUPPORT
+ cause the system to hang?: answer-Here is the modified code:
+TOKEN
+    Name  = "AMD_PSP_ROM_ARMOR3_SMM_SUPPORT"
+    Value  = "0"
+    Help  = "Main switch to enable AmdPspRomArmorSmm support in Project"
+    TokenType = Boolean
+    TargetH = Yes
+End
+
+PcdMapping
+    Name  = "PcdAmdPspRomArmorSelection"
+    GuidSpace  = "gEfiAmdAgesaPkgTokenSpaceGuid"
+    PcdType  = "PcdsDynamicDefault"
+    Value  = "0"
+    TargetDSC = Yes
+    Token = "AMD_PSP_ROM_ARMOR3_SMM_SUPPORT" "=" "0"
+End)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 133 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-How to disable ARMOR3? : answer-TOKEN
+    Name  = "AMD_PSP_ROM_ARMOR3_SMM_SUPPORT"
+    Value  = "0"
+    Help  = "Main switch to enable AmdPspRomArmorSmm support in Project"
+    TokenType = Boolean
+    TargetH = Yes
+End
+
+PcdMapping
+    Name  = "PcdAmdPspRomArmorSelection"
+    GuidSpace  = "gEfiAmdAgesaPkgTokenSpaceGuid"
+    PcdType  = "PcdsDynamicDefault"
+    Value  = "0"
+    TargetDSC = Yes
+    Token = "AMD_PSP_ROM_ARMOR3_SMM_SUPPORT" "=" "0"
+End)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 134 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-How to fix the AMD_PSP_ROM_ARMOR3_SMM_SUPPORT?: answer-TOKEN
+    Name  = "AMD_PSP_ROM_ARMOR3_SMM_SUPPORT"
+    Value  = "0"
+    Help  = "Main switch to enable AmdPspRomArmorSmm support in Project"
+    TokenType = Boolean
+    TargetH = Yes
+End
+
+PcdMapping
+    Name  = "PcdAmdPspRomArmorSelection"
+    GuidSpace  = "gEfiAmdAgesaPkgTokenSpaceGuid"
+    PcdType  = "PcdsDynamicDefault"
+    Value  = "0"
+    TargetDSC = Yes
+    Token = "AMD_PSP_ROM_ARMOR3_SMM_SUPPORT" "=" "0"
+End)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 135 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-Dynamically change the VGA SSID by CPU brand name during the boot process.: answer-Example Code for Modification-->
+AsmCpuid (0x80000002, NULL, NULL, NULL, &RegEdx); //R'one 
+  if (  ((RegEdx & 0xFFFFFFFF) == 0x30303435) |  ((RegEdx & 0xFFFFFFFF) == 0x30303635) |    ((RegEdx & 0xFFFFFFFF) == 0x30303835)   ){ //CZN? (Modify to meet)   // 5400,5600,5800 CPU
+      Value = 0x12072782; //-->(Fill your SSID_
+  }else{
+      Value = PcdGet32 (PcdAmdCfgGnbIGPUSSID);  
+  })
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 136 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-The VGA registry in the OS related to SmartMuxAX 1.5
+ registers.: answer-The related path and registry keys are as follows.
+Path:
+    Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{4d36e968-e325-11ce-bfc1-08002be10318}\0000
+    Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{4d36e968-e325-11ce-bfc1-08002be10318}\0001
+
+Test APU/dGPU:
+DalMpVisualConfirm =A
+
+Driver simulation:
+DalFeatureSmartMuxSupport=2
+KMD_SmartMuxSupported=1
+KMD_SmartMuxDefaultMode=1)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 137 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-Triggering an NMI causes the system to experience a
+ BSOD for debugging purposes.: answer-Please refer to the code in the file NmiBsodStudy.zip)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 138 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-Why can't the eDP display on the AMD CPU + AMD 
+GPU platform?: answer-Here is the modified code:
+TOKEN
+    Name  = "GNB_ForceIgdDisplay_SUPPORT"
+    Value  = "1"
+    Help  = "Main switch for Force IGD display function support for Navi14 dGPU with EEPROM (legacy VBIOS only)"
+    TokenType = Boolean
+    TargetH = Yes
+End)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 139 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-How can we improve the HDMI 2.0 output display
+ failure?: answer-Root Cause:
+The hardware does not provide sufficient capability to 
+achieve 6 Gbps performance. To improve stability, the specification needs to be downgraded.  
+ Purpose: HDMI2.0 6GBPS disable
+     HDMI connect on DP1 port 
+     AmdPbsConfiguration->AdjustDdi1  = 1; 
+     AmdPbsConfiguration->DP1DisplayCaps   = 0x200;)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 140 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-How to improve HDMI output failure?  : answer-To improve HDMI output failure, the purpose is to disable HDMI2.0 6GBPS. The solution involves setting AmdPbsConfiguration->AdjustDdi1 to 1 and AmdPbsConfiguration->DP1DisplayCaps to 0x200 when HDMI is connected on the DP1 port.)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 141 Prompt:
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-Workaround-ADATA M.2 SSD 512GB Device Lose: answer-   Purpose:Disable SSD0 /SSD1 ASPM support
+      DxioAspmDisabled,                           // DxioAspmL0sL1, // ASPM
+      DxioAspmL11Disabled,                   // ASPM L1.1 
+      DxioAspmL12Disabled,                   // ASPM L1.2)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 142 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-How to fix ssd device lose?: answer-   Purpose:Disable SSD0 /SSD1 ASPM support
+      DxioAspmDisabled,                           // DxioAspmL0sL1, // ASPM
+      DxioAspmL11Disabled,                   // ASPM L1.1 
+      DxioAspmL12Disabled,                   // ASPM L1.2)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 143 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-Workaround-ADATA M.2 SSD 512GB Device Lose?: answer-   Purpose:Disable SSD0 /SSD1 ASPM support
+      DxioAspmDisabled,                           // DxioAspmL0sL1, // ASPM
+      DxioAspmL11Disabled,                   // ASPM L1.1 
+      DxioAspmL12Disabled,                   // ASPM L1.2)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 144 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-AMI SCEWIN_64 change password function: answer-TSE tokens RT_ACCESS_SUPPORT_IN_HPKTOOL and
+RT_ACCESS_FOR_EFIVARSTORE must be enabled)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 145 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-SMBIOS for MTK device: answer-Refer to patch: SmbiosforMtk)
+Goal:using the given context to generate two variations of question and answer sentences.
+
+--------------------------------------------------------------------------------
+Row 146 Prompt:
+
+
+Role:You are a llm prompt expert.
+Task:Given the following context, Please generate two variations of question and answer sentences in the following format:
+    variation-
+    question:
+    answer:
+Context: (question-Add the OKEC flag to the thermal device to 
+avoid issues when the EC is not ready.: answer-Please refer to the code in the file Thermal device add OKEC flag avoid EC not  ready)
+Goal:using the given context to generate two variations of question and answer sentences.

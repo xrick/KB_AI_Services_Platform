@@ -1,0 +1,17 @@
+fw-qa1:
+original:
+question:
+         Low battery power is less than 4%. Connect to PD power supply >Do not turn on (displays low battery icon) light
+answer:
+         TYPE C PD AC Loss:Can be confirmed with an oscilloscope
+variation-1
+question:
+        What diagnostic method is recommended when a device shows the low battery icon but won't power on despite being connected to a PD charger?
+answer:
+        Use an oscilloscope to verify TYPE-C PD power delivery status and check for AC loss abnormalities in the charging circuit.
+
+variation-2:
+question:
+          How should technicians confirm PD charger functionality when encountering a persistent low battery warning?
+answer:
+          Technicians can employ oscilloscope measurements to analyze the PD power supply waveform and detect potential AC signal interruptions in the TYPE-C interface.

@@ -1,0 +1,26 @@
+original:
+question: Workaround-ADATA M.2 SSD 512GB Device Lose.
+answer:   
+      Purpose:Disable SSD0 /SSD1 ASPM support
+      DxioAspmDisabled,                           // DxioAspmL0sL1, // ASPM
+      DxioAspmL11Disabled,                   // ASPM L1.1 
+      DxioAspmL12Disabled,                   // ASPM L1.2)
+---------------------------------------------------------------------------------------------------------------------
+variation-1
+question:
+What BIOS settings adjustments are required to resolve ADATA M.2 SSD 512GB device disappearance issues?
+answer:
+Disable ASPM support for SSD0/SSD1 by configuring these parameters:
+DxioAspmDisabled (disable L0s/L1 states)
+DxioAspmL11Disabled (disable L1.1 substate)
+DxioAspmL12Disabled (disable L1.2 substate)
+----------------------------------------------------------------------------------------------------------------------
+variation-2
+question:
+How to modify ASPM configurations to address SSD detection failures in ADATA M.2 drives?
+answer:
+Implement these BIOS-level changes:
+• Disable L0s/L1 power states via DxioAspmDisabled
+• Block L1.1 power management with DxioAspmL11Disabled
+• Prevent L1.2 transitions using DxioAspmL12Disabled
+This triple-layer ASPM restriction ensures stable SSD connectivity.
